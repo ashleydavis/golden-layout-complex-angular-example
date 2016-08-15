@@ -7,17 +7,26 @@
         <link type="text/css" rel="stylesheet" href="bower_components/golden-layout/src/css/goldenlayout-base.css" />
         <link type="text/css" rel="stylesheet" href="bower_components/golden-layout/src/css/goldenlayout-dark-theme.css" />
 
+        <link type="text/css" rel="stylesheet" href="app.css" />
+
         <script type="text/javascript" src="app.js"></script>
 
-        <template type="text/html" id="userNameTemplate">
-            <div ng-controller="user" class="section">
-                <strong>Username</strong> {{name}}
-            </div>
+        <template type="text/html" id="userlistTemplate">
+            <ul ng-controller="userlistController" class="userlist">
+                <li ng-repeat="user in users" 
+                    ng-click="select( user )"
+                    ng-class="{selected:user.isSelected}"
+                    >
+                    {{user.name}}
+                </li>
+            </ul>
         </template>
 
         <template type="text/html" id="userDetailTemplate">
-            <div ng-controller="userDetails" class="section">
-                <strong>Age</strong> {{age}}
+            <div ng-controller="userdetailsController" class="userdetails">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152047/{{user.img}}" width="100" height="100" />
+                <h2>{{user.name}}</h2>
+                <p>{{user.street}}</p>
             </div>
         </template>
 
