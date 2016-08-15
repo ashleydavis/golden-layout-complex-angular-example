@@ -1,0 +1,22 @@
+{
+  "name": "golden-layout-example",
+  "homepage": "https://github.com/ashleydavis/golden-layout-example",
+  "authors": [
+    "Ashley Davis <ashley@codecapers.com.au>"
+  ],
+  "description": "An example of GoldenLayout - a multi-screen layout manager for webapps.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "golden-layout": "^1.5.1",
+    "angular": "^1.5.8"
+  }
+}
